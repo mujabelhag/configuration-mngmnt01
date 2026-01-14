@@ -1,0 +1,20 @@
+- name: launch ec2 instance on aws 
+  hosts: localhost 
+  connection: local 
+  vars_files:
+    - var-CP.yml
+
+  tasks:
+    - name: launch ec2 instance 
+      amazon.aws.ec2:
+         region: "{{aws_region}}"
+         key_name: "{{key_name}}"
+         instance_type: "{{instance_type}}"
+         ami: "{{ami_id}}"
+         group_id: "{{security_group}}"
+         count: 10
+         vpc_subnet_id:
+
+    - name: deploy the instance public ip address
+      debug:
+        msg: "Ec2 public ip is : {{ec2.instance[0].public_ip}}"

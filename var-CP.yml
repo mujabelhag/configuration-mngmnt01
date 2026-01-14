@@ -1,0 +1,5 @@
+aws_region: us-west-1
+key_name: my-key
+instance_type: t2.micro
+ami_id: ami-0f8ce53a93ab42329
+security_group: sg -564886165464
