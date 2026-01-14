@@ -114,3 +114,18 @@ a multi-tier application typically has :
 
 
 # CI/CD with ansible and github actions :
+
+ci/cd with ansible and github actions is like in the same directory (repository) we add our ansible file (inventory file , palybook, roles....)
+
+
+
+project/
+│
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+│
+├── inventory
+├── playbook.yml
+├── ansible.cfg
+└── README.md
